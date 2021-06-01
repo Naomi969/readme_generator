@@ -21,6 +21,8 @@ const generateRD = (answers) =>
   ## Installation
   
   To install the necessary dependencies, run the following command:
+  
+  ${answers.command}
  
   
   ## Usage
@@ -34,7 +36,7 @@ const generateRD = (answers) =>
   
   ## Tests
   To run tests, run the following command:
-  
+ ${answers.test}
   
   ## Questions
   If you have any questions about the repo, open and issue or contact me directly at ${answers.email}. You can find more of my work at 
