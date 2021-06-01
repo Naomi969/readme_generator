@@ -11,34 +11,39 @@ const generateRD = (answers) =>
   ${answers.description}
   
   ## Table of Content
-  * Instalation
-  * Usage
-  * License
-  * Contributing
-  * Tests
-  * Questions
+  * [Instalation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributing](#Contribution)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
   
   ## Installation
-  
+  <a name="Instalation"></a>
   To install the necessary dependencies, run the following command:
   
   ${answers.command}
  
   
   ## Usage
+  <a name="Usage"></a>
   ${answers.needToKnow}.
   
   ## License
+  <a name="License"></a>
   This project is licensed under the ${answers.license} license.
   
   ## Contributing
+  <a name="Contribution"></a>
   ${answers.contributing}.
   
   ## Tests
+  <a name="Tests"></a>
   To run tests, run the following command:
  ${answers.test}
   
   ## Questions
+  <a name="Question"></a>
   If you have any questions about the repo, open and issue or contact me directly at ${answers.email}. You can find more of my work at 
   [${answers.username}](https://github.com/${answers.username})`;
 
