@@ -2,7 +2,43 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateRD = (answers) =>
-  ``;
+  `# ${answers.project_name}
+
+  liscence|${answers.license}
+  
+  ## Description
+  
+  ${answers.description}
+  
+  ## Table of Content
+  * Instalation
+  * Usage
+  * License
+  * Contributing
+  * Tests
+  * Questions
+  
+  ## Installation
+  
+  To install the necessary dependencies, run the following command:
+ 
+  
+  ## Usage
+  ${answers.needToKnow}.
+  
+  ## License
+  This project is licensed under the ${answers.license} license.
+  
+  ## Contributing
+  ${answers.contributing}.
+  
+  ## Tests
+  To run tests, run the following command:
+  
+  
+  ## Questions
+  If you have any questions about the repo, open and issue or contact me directly at ${answers.email}. You can find more of my work at 
+  [${answers.username}](https://github.com/${answers.username})`;
 
 inquirer
   .prompt([
@@ -61,4 +97,5 @@ inquirer
     fs.writeFile('README.md', RDPageContent, (err) =>
       err ? console.log(err) : console.log('Generating README...')
     );
+    console.log(answers)
   });
