@@ -1,51 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
-const generateRD = (answers) =>
-  `# ${answers.project_name}
-
-  liscence|${answers.license}
-  
-  ## Description
-  
-  ${answers.description}
-  
-  ## Table of Content
-  * [Instalation](#Installation)
-  * [Usage](#Usage)
-  * [License](#License)
-  * [Contributing](#Contribution)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
-  
-  ## Installation
-  <a name="Instalation"></a>
-  To install the necessary dependencies, run the following command:
-  
-  ${answers.command}
- 
-  
-  ## Usage
-  <a name="Usage"></a>
-  ${answers.needToKnow}.
-  
-  ## License
-  <a name="License"></a>
-  This project is licensed under the ${answers.license} license.
-  
-  ## Contributing
-  <a name="Contribution"></a>
-  ${answers.contributing}.
-  
-  ## Tests
-  <a name="Tests"></a>
-  To run tests, run the following command:
- ${answers.test}
-  
-  ## Questions
-  <a name="Question"></a>
-  If you have any questions about the repo, open and issue or contact me directly at ${answers.email}. You can find more of my work at 
-  [${answers.username}](https://github.com/${answers.username})`;
+const generateRD = require('./utils/generateMarkdown')
 
 inquirer
   .prompt([
@@ -73,7 +28,7 @@ inquirer
         type: 'list',
         message: 'What kind of license should your project have?',
         name: 'license',
-        choices:['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+        choices:['MIT', 'APACHE 2.0', 'GPL 3.0', 'MPL 2.0', 'None']
     },
     {
         type: 'input',
@@ -106,3 +61,8 @@ inquirer
     );
     console.log(answers)
   });
+
+ 
+
+
+  
